@@ -474,10 +474,8 @@ table {
 }
 .s7-txt * {
     margin:8px 0;
-    line-height:1.5
-}
-@media screen and (max-width:1200px){
-    
+    line-height:1.5;
+    font-size:16px;
 }
 @media screen and (max-width:800px){
     .gnav>button {
@@ -621,6 +619,9 @@ table {
     .s4-txt span {
         font-size:12px;
     }
+    .s7-txt * {
+        font-size:14px;
+    }
 }
 @media screen and (max-width:480px){
     
@@ -637,5 +638,8 @@ table {
     .s5-txt,
     .s6-txt {
         font-size:14px;
+    }
+    .s7-txt * {
+        font-size:12px;
     }
 }
