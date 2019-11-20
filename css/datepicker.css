@@ -1,0 +1,95 @@
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+/* Component CSS */
+
+.calendar{
+    background:rgba(51,51,51,0.9);
+    border: none;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -o-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    position: absolute;
+    z-index: 9;
+    padding:20px 0;
+}
+
+.calendar > div {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.calendar.hidden{
+    display: none;
+}
+
+.calendar .navWrapper > span {
+    cursor: pointer;
+}
+.calendar .month h4 {
+    margin-bottom:10px;
+    color:#eeeeee;
+}
+.calendar .month .table {
+    margin-bottom:10px;
+}
+.calendar .month thead td {
+    color:#cccccc;
+}
+.calendar .month tr {
+    border-bottom:1px solid #999999;
+}
+.calendar .month td {
+    padding:5px 2px;
+    text-align:center;
+    font-size: 14px;
+}
+.calendar .month > table td.active, .calendar .month > table td.selected{
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.calendar .month > table td.selected{
+    background-color: #aaaaaa;
+}
+
+.calendar .month > table td.disabled{
+    opacity: 0.7;
+    text-decoration: line-through;
+    cursor: not-allowed;
+    color: #888;
+}
+
+.calendar .closeWidget{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+}
+
+.calendar .closeWidget p{
+    cursor: pointer;
+    color:#eeeeee;
+}
+
+@media screen and (max-width:800px) and (min-width:641px) {
+    .calendar > .navWrapper {
+        margin: 0 3px;
+    }
+    .calendar .month td {
+        font-size:13px;
+        padding:5px 1.2px;
+    }
+    
+}
