@@ -566,6 +566,10 @@ table {
     .h-logoimg {
         height:70%;
     }
+    .gnav>button {
+        height:24px;
+        margin:13px 10px;
+    }
     .sec00 .sec-inner,
     .sec-inner {
         padding-top:50px;
