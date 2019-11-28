@@ -5,22 +5,23 @@ $(function(){
     
     var winW = $(window).width(),
         winH = $(window).height();
+    $('.wrap>section').height(winH);
     
     function roomW() {
         if(winW>640) {
             $('.s2-box').find('li').each(function(i){
                 $(this).on('mouseenter', function(){
-                    $('.s2-box').find('li').stop().animate({width:'15%'},hlong)
-                    $('.s2-box').find('.s2-r-in>*').stop().animate({opacity:0.4},hlong);
-                    $(this).stop().animate({width:'70%'},hlong);
-                    $(this).find('.sec-blc').stop().animate({opacity:0.2},hlong)
-                    $(this).find('.s2-r-in>*').stop().animate({opacity:1},hlong)
+                    $('.s2-box').find('li').stop().css({width:'15%', transition:'0.5s'});
+                    $('.s2-box').find('.s2-r-in>*').css({opacity:0.4, transition:'0.5s'});
+                    $(this).css({width:'70%', transition:'0.5s'});
+                    $(this).find('.sec-blc').css({opacity:0.2, transition:'0.5s'});
+                    $(this).find('.s2-r-in>*').css({opacity:1, transition:'0.5s'})
                 }).on('mouseleave', function(){
-                    $('.s2-box').find('.sec-blc').stop().animate({opacity:0.4},hlong)
-                    $('.s2-box').find('.s2-r-in>*').stop().animate({opacity:1},hlong);
-                    $('.s2-box').find('li').eq(0).stop().animate({width:'33.33%'},hlong)
-                    $('.s2-box').find('li').eq(1).stop().animate({width:'33.33%'},hlong)
-                    $('.s2-box').find('li').eq(2).stop().animate({width:'33.34%'},hlong)
+                    $('.s2-box').find('.sec-blc').css({opacity:0.4, transition:'0.5s'});
+                    $('.s2-box').find('.s2-r-in>*').css({opacity:1, transition:'0.5s'});
+                    $('.s2-box').find('li').eq(0).css({width:'33.33%', transition:'0.5s'});
+                    $('.s2-box').find('li').eq(1).css({width:'33.33%', transition:'0.5s'});
+                    $('.s2-box').find('li').eq(2).css({width:'33.34%', transition:'0.5s'});
                 })
             })
         }
@@ -100,6 +101,7 @@ $(function(){
     $(window).resize(function(){
         winW = $(window).width();
         winH = $(window).height();
+        $('.wrap>section').height(winH);
         
         roomW();
     })
